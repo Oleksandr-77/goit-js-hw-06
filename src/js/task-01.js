@@ -1,4 +1,4 @@
-const itemEl = document.querySelectorAll('.item');
+const itemEl = document.querySelectorAll('li.item');
 console.log('Number of categories:' , itemEl.length);
 itemEl.forEach(element => {
     const titleEl = element.firstElementChild;
