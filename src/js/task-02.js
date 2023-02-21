@@ -15,7 +15,6 @@ const itemRef = document.createElement('li');
   itemRef.textContent = ingredient;
   itemRef.classList.add('item');
   console.log(itemRef);
-  ulRef.append(itemRef);
 
   return itemRef;
 
@@ -23,5 +22,5 @@ const itemRef = document.createElement('li');
 
 console.log(elements);
 
-// ulRef.append(itemRef);
+ulRef.append(...elements);
 
