@@ -12,3 +12,20 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+ // Написати функцію яка створить розмітку картки
+const makeImagesCard = ({
+  url,
+  alt,
+}) => `<li class="gallery-item">
+        <img src="${url}" alt="${alt}" width ="640">
+  </li>`;
+
+// Cтворити масив із розмітки і вставити у список .gallery
+const listEl = document.querySelector('.gallery');
+
+const makeImagesMarkup = images.map((data) => makeImagesCard(data)).join('');
+
+listEl.insertAdjacentHTML('afterbegin', makeImagesMarkup);
+console.log(makeImagesMarkup); 
