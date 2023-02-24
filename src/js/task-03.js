@@ -19,7 +19,7 @@ const makeImagesCard = ({
   url,
   alt,
 }) => `<li class="gallery-item">
-        <img src="${url}" alt="${alt}" width ="640">
+        <img src="${url}" alt="${alt}" width ="380">
   </li>`;
 
 // Cтворити масив із розмітки і вставити у список .gallery
@@ -29,3 +29,8 @@ const makeImagesMarkup = images.map((data) => makeImagesCard(data)).join('');
 
 listEl.insertAdjacentHTML('afterbegin', makeImagesMarkup);
 console.log(makeImagesMarkup); 
+
+listEl.setAttribute(
+  'style',
+  'list-style:none; display: flex; justify-content: space-between; padding: 30px;'
+);
