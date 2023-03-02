@@ -2,6 +2,9 @@
 const inputEl = document.querySelector("#validation-input");
 
 inputEl.addEventListener("blur", () => {
-    inputEl.classList.toggle("valid", inputEl.value.length >= 6 );
-    inputEl.classList.toggle("invalid", inputEl.value.length < 6 );
+    const result = inputEl.value.length === Number(inputEl.getAttribute("data-length"));
+
+    console.log(result);
+    console.log(inputEl.classList.toggle("valid", result));
+    console.log(inputEl.classList.toggle("invalid", !result));
 });
